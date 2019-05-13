@@ -1,0 +1,26 @@
+{
+	"id": 1,
+	"questions" : [
+		{
+			"pos": 1,
+			"title": "What is capital of nepal?",
+			options: [
+				{
+					"pos" : 1,
+					"ans": "kathmandu"
+				},
+				{
+					"pos" : 2
+					"ans": "kathmandu"
+				},{
+					"pos" : 3,
+					"ans": "kathmandu"
+				},{
+					"pos" : 4,
+					"ans": "kathmandu"
+				}
+			],
+			correctans: 2
+		}
+	]
+}
