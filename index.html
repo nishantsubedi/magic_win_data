@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <title>Dance</title>
+  <!-- Bootstrap 
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">-->
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script>
+	$(function() {
+    var winh = $(window).height();
+    var winw = $(window).width();
+    $('body').css({
+        'height': winh,
+        'width': winw
+    });
+
+
+
+    TweenMax.from('.speakerL', 0.3, {
+        scale: 1.1,
+        yoyo: true,
+        repeat: -1,
+        ease: Bounce.easeOut
+    });
+    TweenMax.from('.speakerR', 0.3, {
+        scale: 1.1,
+        yoyo: true,
+        repeat: -1,
+        ease: Bounce.easeOut
+    });
+    TweenMax.staggerFrom('.crowd', 0.5, {
+        y: 100,
+        yoyo: true,
+        repeat: -1,
+    }, 0.1);
+    TweenMax.from('.lightL', 0.5, {
+        x: winw / 2,
+        yoyo: true,
+        repeat: -1,
+        repeatDelay: 2
+    });
+    TweenMax.from('.lightR', 0.5, {
+        x: -winw / 2,
+        yoyo: true,
+        repeat: -1,
+        repeatDelay: 2
+    });
+    TweenMax.fromTo('.psy', 5, {
+        'backgroundPosition': '0 0',
+        x: -200,
+    }, {
+        'backgroundPosition': '-4722px 0',
+        repeat: -1,
+        yoyo: true,
+        ease: SteppedEase.config(21),
+        x: 200
+    });
+});</script>
+	<style>
+	body {
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+	background: url(https://image.ibb.co/hTLZRV/wall.jpg);
+}
+ul, li, ol {
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0px;
+	padding: 0px;
+}
+a:focus, a:hover {
+	text-decoration: none;
+	outline: 0px;
+}
+footer {
+	background: url(https://image.ibb.co/kr5tmV/stage.png) no-repeat center center;
+	position: fixed;
+	bottom: -50px;
+	left: 0;
+	width: 100%;
+	min-height: 350px;
+}
+.speakerL {
+	position: absolute;
+	left: 10%;
+	bottom: 250px;
+	z-index: 5;
+}
+.lightL {
+	position: absolute;
+	left: 20%;
+	top: -195px;
+	z-index: 999;
+}
+.lightR {
+	position: absolute;
+	right: 20%;
+	top: -195px;
+	z-index: 999;
+}
+.speakerR {
+	position: absolute;
+	right: 10%;
+	bottom: 250px;
+	z-index: 5;
+}
+.crowd {
+	position: absolute;
+	bottom: 0;
+	z-index: 9999;
+}
+.crwd1 {
+	left: 10px;
+}
+.crwd2 {
+	left: 120px;
+}
+.crwd3 {
+	left: 240px;
+}
+.crwd4 {
+	left: 400px;
+}
+.crwd5 {
+	left: 550px;
+}
+.crwd6 {
+	left: 600px;
+}
+.crwd7 {
+	left: 700px;
+}
+.crwd8 {
+	left: 850px;
+}
+.crwd9 {
+	left: 1000px;
+}
+.crwd10 {
+	left: 1150px;
+}
+.crwd11 {
+	left: 1350px;
+}
+.crwd12 {
+	left: 1500px;
+}
+.crwd13 {
+	left: 1600px;
+}
+.crwd14 {
+	left: 1800px;
+}
+.psy {
+	background: url(https://image.ibb.co/kRoDmV/psy.png) no-repeat;
+	width: 225px;
+	height: 400px;
+	position: fixed;
+	left: 50%;
+	margin-left: -91px;
+	bottom: 160px;
+	z-index: 99;
+}
+.guitar-player {
+	position: fixed;
+	left: 25%;
+	bottom: 220px;
+	z-index: 9;
+	width: 155px;
+	display: none;
+}
+.drummer-player {
+	position: fixed;
+	right: 25%;
+	bottom: 230px;
+	z-index: 9;
+	width: 255px;
+	display: none;
+}
+.drummer-player2 {
+	position: fixed;
+	left: 28%;
+	bottom: 230px;
+	z-index: 9;
+	width: 255px;
+	display: none;
+}
+.guitar-player img, .drummer-player img, .drummer-player2 img {
+	width: 100%;
+}</style>
+</head>
+
+<body>
+<!-- 	<iframe 
+  frameborder="0" 
+  width="400"     
+  height="200"
+  src="https://drive.google.com/file/d/1EiYDXtl3jiI3JxSmomvwgRdypfh5BC-8">    
+</iframe> -->
+  <!-- music src = images/music.mp3
+  <audio autoplay loop>
+    <source src="https://drive.google.com/open?id=1EiYDXtl3jiI3JxSmomvwgRdypfh5BC-8" type="audio/mpeg"> Your browser does not support the audio element.
+  </audio>
+  <!-- /music -->
+  <!-- speakerL -->
+  <div class="speakerL">
+    <img src="https://image.ibb.co/iFP8Lq/speaker1.png" alt="">
+  </div>
+  <!-- /speakerL -->
+  <!-- speakerr -->
+  <div class="speakerR">
+    <img src="https://image.ibb.co/nt0hfq/speaker2.png"" alt="">
+  </div>
+  <!-- /speakerR -->
+  <!-- lightL -->
+  <div class="lightL">
+    <img src="https://image.ibb.co/f6Hv0q/lightL.png" alt="">
+  </div>
+  <!-- /lightL -->
+  <!-- lightR -->
+  <div class="lightR">
+    <img src="https://image.ibb.co/j6Lhfq/lightR.png" alt="">
+  </div>
+  <!-- /lightR -->
+  <!-- .drummer-player -->
+  <div class="drummer-player">
+    <img src="https://image.ibb.co/dAgYmV/drummer-player.gif" alt="">
+  </div>
+  <!-- /.drummer-player -->
+  <!-- ..drummer-player2 -->
+  <div class="drummer-player2">
+    <img src="https://image.ibb.co/njMAYA/drummer2.gif" alt="">
+  </div>
+  <!-- /..drummer-player2 -->
+  <!-- .guitar-player -->
+  <div class="guitar-player">
+    <img src="https://image.ibb.co/nrNTLq/guitar-player.png" alt="">
+  </div>
+  <!-- /.guitar-player -->
+  <!-- psy -->
+  <div class="psy"></div>
+  <!-- /psy -->
+  <!-- psy -->
+  <div class="crowd crwd1">
+    <img src="https://image.ibb.co/kYbcDA/crowd1.png" alt="">
+  </div>
+  <div class="crowd crwd2">
+    <img src="https://image.ibb.co/dBE8Lq/crowd2.png" alt="">
+  </div>
+  <div class="crowd crwd3">
+    <img src="https://image.ibb.co/kYbcDA/crowd1.png" alt="">
+  </div>
+  <div class="crowd crwd4">
+    <img src="https://image.ibb.co/fnvtmV/crowd3.png" alt="">
+  </div>
+  <div class="crowd crwd5">
+    <img src="https://image.ibb.co/kYbcDA/crowd1.png" alt="">
+  </div>
+  <div class="crowd crwd6">
+    <img src="https://image.ibb.co/dBE8Lq/crowd2.png" alt="">
+  </div>
+  <div class="crowd crwd7">
+    <img src="https://image.ibb.co/kYbcDA/crowd1.png" alt="">
+  </div>
+  <div class="crowd crwd8">
+    <img src="https://image.ibb.co/fnvtmV/crowd3.png" alt="">
+  </div>
+  <div class="crowd crwd9">
+    <img src="https://image.ibb.co/kYbcDA/crowd1.png" alt="">
+  </div>
+  <div class="crowd crwd10">
+    <img src="https://image.ibb.co/dBE8Lq/crowd2.png" alt="">
+  </div>
+  <div class="crowd crwd11">
+    <img src="https://image.ibb.co/kYbcDA/crowd1.png" alt="">
+  </div>
+  <div class="crowd crwd12">
+    <img src="https://image.ibb.co/fnvtmV/crowd3.png" alt="">
+  </div>
+  <div class="crowd crwd13">
+    <img src="https://image.ibb.co/kYbcDA/crowd1.png" alt="">
+  </div>
+  <div class="crowd crwd14">
+    <img src="https://image.ibb.co/fnvtmV/crowd3.png" alt="">
+  </div>
+  <!-- /psy -->
+  <!-- stage-floor -->
+  <footer>
+  </footer>
+  <!-- /stage-floor -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 
+  <script src="js/jquery.min.js"></script>-->
+  <!-- Include all compiled plugins (below), or include individual files as needed 
+  <script src="js/TweenMax.min.js"></script>
+  <script src="js/common.js"></script>-->
+  
+    <a href='http://www.freevisitorcounters.com'>Free Visitor Counters</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=a7f0bc3a567ee26ea85569813843e7c17fe7f6ab'></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/526887/t/2"></script>
+</body>
+
+</html>
